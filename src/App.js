@@ -53,7 +53,7 @@ function App() {
       }, 500);
       return () => clearInterval(interval);
     }
-  git add .}, [appState, mediaRecorder, startRecording]);
+  }, [appState, mediaRecorder, startRecording]);
 
   const startRecording = () => {
     const stream = webcamRef.current?.video?.srcObject;
