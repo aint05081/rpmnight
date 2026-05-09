@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import Webcam from "react-webcam";
 import { QRCodeCanvas } from "qrcode.react";
 import "./App.css";
@@ -46,7 +46,7 @@ function App() {
   const frameWidth = 1800;
   const frameHeight = 1200;
 
-  const startRecording = () => {
+  const startRecording = useCallback(() => {
     const stream = webcamRef.current?.video?.srcObject;
 
     if (!stream || !(stream instanceof MediaStream)) {
@@ -82,7 +82,7 @@ function App() {
 
     recorder.start();
     setMediaRecorder(recorder);
-  };
+  }, [webcamRef]);
 
   useEffect(() => {
     if (appState === "recording") {
