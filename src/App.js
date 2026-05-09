@@ -16,8 +16,8 @@ const commonButtonStyle = {
 };
 
 const frameOptions = [
-  { name: "알밤 농장", file: "frame1.png" },
-  { name: "회장단과 함께", file: "frame2.png" },
+  { name: "아경체전", file: "frame1.png" },
+  { name: "경영대학", file: "frame2.png" },
   { name: "감성 알밤", file: "frame3.png" },
 ];
 
