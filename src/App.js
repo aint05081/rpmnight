@@ -16,8 +16,9 @@ const commonButtonStyle = {
 };
 
 const frameOptions = [
-  { name: "RPM의 밤", file: "frame1.png" },
-
+  { name: "1번 프레임", file: "frame1.png" },
+  
+];
 
 function App() {
   const webcamRef = useRef(null);
@@ -537,3 +538,4 @@ function App() {
   );
 }
 
+export default App;
